@@ -1,1 +1,1 @@
-./rethinkdb --bind localhost
+./rethinkdb --bind-driver localhost --no-http-admin
