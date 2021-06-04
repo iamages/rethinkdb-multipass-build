@@ -6,5 +6,6 @@ multipass exec ${MULTIPASS_INSTANCE_NAME} -- chmod +x build.sh &&
 multipass exec ${MULTIPASS_INSTANCE_NAME} -- ./build.sh &&
 [ ! -e bin/rethinkdb ] || rm bin/rethinkdb &&
 multipass transfer ${MULTIPASS_INSTANCE_NAME}:rethinkdb-src/build/release_clang/rethinkdb bin &&
+multipass stop ${MULTIPASS_INSTANCE_NAME} &&
 multipass delete ${MULTIPASS_INSTANCE_NAME} &&
 multipass purge
