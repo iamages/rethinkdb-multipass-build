@@ -6,5 +6,5 @@ wget https://github.com/rethinkdb/rethinkdb/archive/refs/tags/v${RETHINKDB_VERSI
 tar -xvf v${RETHINKDB_VERSION}.tar.gz &&
 mv rethinkdb-${RETHINKDB_VERSION} rethinkdb-src &&
 cd rethinkdb-src &&
-./configure --allow-fetch CXX=clang++&&
+./configure --allow-fetch --static all --dynamic none CXX=clang++ &&
 make -j7
